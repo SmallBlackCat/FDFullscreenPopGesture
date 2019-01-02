@@ -111,7 +111,7 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         UIViewController *viewController = self.navigationController.viewControllers.lastObject;
         if (viewController && !viewController.fd_prefersNavigationBarHidden) {
-            [self.navigationController setNavigationBarHidden:NO animated:NO];
+//             [self.navigationController setNavigationBarHidden:NO animated:NO];
         }
     });
 }
@@ -189,7 +189,7 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     _FDViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (strongSelf) {
-            [strongSelf setNavigationBarHidden:viewController.fd_prefersNavigationBarHidden animated:animated];
+//             [strongSelf setNavigationBarHidden:viewController.fd_prefersNavigationBarHidden animated:animated];
         }
     };
     
