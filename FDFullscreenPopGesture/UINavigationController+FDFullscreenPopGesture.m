@@ -196,10 +196,10 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     // Setup will appear inject block to appearing view controller.
     // Setup disappearing view controller as well, because not every view controller is added into
     // stack by pushing, maybe by "-setViewControllers:".
-    appearingViewController.fd_willAppearInjectBlock = block;
+//     appearingViewController.fd_willAppearInjectBlock = block;
     UIViewController *disappearingViewController = self.viewControllers.lastObject;
     if (disappearingViewController && !disappearingViewController.fd_willAppearInjectBlock) {
-        disappearingViewController.fd_willAppearInjectBlock = block;
+//         disappearingViewController.fd_willAppearInjectBlock = block;
     }
 }
 
